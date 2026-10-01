@@ -22,6 +22,14 @@ public class DigitSum {
      */
     public static int digitSum(int n) {
         // TODO: complete
-        return 0;
+        if (n < 0) {
+          n = n * -1;
+        }
+        String bingus = String.valueOf(n);
+        int sumSoFar = 0;
+        for (int i = 0; i < bingus.length() ; i ++) {
+            sumSoFar += Character.getNumericValue(bingus.charAt(i));
+        }
+        return sumSoFar;
     }
 }
